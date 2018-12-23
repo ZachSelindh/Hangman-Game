@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "WildWestFont";
+    src: url("../fonts/Carnevalee-Freakshow.ttf");
+}
+
+::-webkit-input-placeholder { /* Chrome */
+    color:white !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color:white !important;
+}
+  
+::-moz-placeholder { /* Firefox 19+ */
+    color:white !important;
+}
+
+:-moz-placeholder { /* Firefox 4 - 18 */
+    color:white !important;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "WildWestFont" !important;
+}
+
+#popup {
+    z-index: 9999;
+    background-color: white;
+    position: fixed;
+    margin: auto;
+}
+
+#titleTop {
+    text-align: center;
+    margin: auto;
+    padding: 0.2em;
+    font-size: 300%;
+}
+
+body {
+    background-image: url("../images/WildWestWallpaper.jpeg");
+    
+}
+
+.opaque {
+    opacity: 0.1;
+}
+
+.hidden {
+    display: none;
+}
+
+#wordotron {
+    margin: auto;
+    width: fit-content;
+}
+
+#wildWestWord {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0.25em 0em;
+    text-align: center;
+    font-size: 400%;
+    letter-spacing: 0.5em;
+    padding: 0.5em 0.5em;
+
+}
+
+#inputField {
+    clear: all;
+    margin-top: 0em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#letterGuess {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: auto;
+    text-align: center;
+}
+
+#misses {
+    width: 100%;
+    font-size: 200%;
+    margin-top: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+#gallowImage {
+    margin-top: 2em;
+}
+
+#scoreCount {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: auto;
+    margin-top: 1em;
+    padding: 1.3em 0.25em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+#inputField {
+    margin-top: 23em;
+    width: 100%
+}
+
+#gallowImage {
+    margin-top: 1em;
+
+}
+}
+
+
