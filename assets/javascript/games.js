@@ -79,23 +79,28 @@
 
         /* If the length pf the correct guesses is the same as the word, player wins and game restarts. */
     function winCase() {
-        if (word.array.length === wildWildGuesses.correctArray.length){
-            alert("You win!");
-
-                /* Resets the guess arrays, adds a point, and chooses a new word. */
-            wildWildGuesses.correctArray = [];
-            wildWildGuesses.missedArray = [];
-            scoreWins += 1;
-            chooseWord();
-                /* Submits the correct guess into the display array. */
-        } else if (word.initial.indexOf(wildWildGuesses.initial) > -1) {
+        if (word.initial.indexOf(wildWildGuesses.initial) > -1) {
             for (i = 0; i < word.display.length; i++) {
 		        if (wildWildGuesses.initial.includes(word.finalArray[i])) {
 			    word.display[i] = wildWildGuesses.initial
-			    document.getElementById("wildWestWord").textContent = word.display.join(" ");
+                document.getElementById("wildWestWord").textContent = word.display.join(" ");
+                    }
                 }
+        if (word.array.length === wildWildGuesses.correctArray.length) {
+                    resetWords()
+                    scoreWins += 1;
+                
             }
         }
+    }
+
+    function resetWords (){ 
+        setTimeout(function() {
+            alert("You win!");
+        wildWildGuesses.correctArray = [];
+        wildWildGuesses.missedArray = [];
+        chooseWord();
+        }, 300);
     }
 
     /* word.display.splice(word.initial.indexOf(wildWildGuesses.initial), 1, wildWildGuesses.initial); */
