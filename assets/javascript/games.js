@@ -147,6 +147,10 @@
 
         } else {
 
+            document.getElementById("gallowsImage").src="assets/images/gallows0.jpeg"
+            wildWildGuesses.missedArray = [];
+            document.getElementById("misses").innerHTML = 
+                wildWildGuesses.missedArray;
             word.display = [];
                 /* Set a random number generator that chooses which word comes from the array. */
             function randomNum() {
